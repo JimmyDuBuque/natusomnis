@@ -1,0 +1,45 @@
+{
+  "name": "natusomnis",
+  "version": "1.0.0",
+  "description": "A node.js wrapper for the docker-machine CLI",
+  "main": "dist/index.js",
+  "typings": "dist/index",
+  "files": [
+    "dist/",
+    "typings.json"
+  ],
+  "scripts": {
+    "lint": "tslint src/**/*.ts",
+    "build": "rimraf dist/ && tsc",
+    "test-spec": "ts-node node_modules/blue-tape/bin/blue-tape.js \"src/**/*.spec.ts\" | tap-diff",
+    "test": "npm run lint && npm run build && npm run test-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JimmyDuBuque/natusomnis.git"
+  },
+  "keywords": [
+    "nihil"
+  ],
+  "author": "ZechariahProsacco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JimmyDuBuque/natusomnis.git/issues"
+  },
+  "homepage": "https://github.com/JimmyDuBuque/natusomnis.git",
+  "devDependencies": {
+    "blue-tape": "^0.2.0",
+    "bluebird": "^3.4.0",
+    "rimraf": "^2.5.2",
+    "tap-diff": "^0.1.1",
+    "ts-node": "^0.7.3",
+    "tslint": "^3.10.2",
+    "typescript": "^1.8.10"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.0",
+    "cli-table-2-json": "^1.0.8",
+    "dockermachine-cli-js": "^2.0.4",
+    "lodash": "^4.12.0"
+  }
+}
